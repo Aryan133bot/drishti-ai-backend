@@ -9,7 +9,6 @@ from typing import Optional
 app = FastAPI(title="DRISHTI.AI API", version="1.0.0")
 
 
-
 # CORS Configuration
 app.add_middleware(
     CORSMiddleware,
