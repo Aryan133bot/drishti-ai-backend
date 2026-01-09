@@ -7,6 +7,10 @@ import re
 from typing import Optional
 
 app = FastAPI(title="DRISHTI.AI API", version="1.0.0")
+@app.get("/")
+def root():
+    return {"status": "DRISHTI.AI backend is running"}
+
 
 # CORS Configuration
 app.add_middleware(
