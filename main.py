@@ -327,7 +327,3 @@ async def analyze_message(request: MessageRequest):
         message_preview=message_preview
     )
 
-
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
