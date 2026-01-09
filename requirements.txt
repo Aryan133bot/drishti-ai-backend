@@ -1,6 +1,6 @@
 fastapi
 uvicorn
-pydantic
 python-dotenv
 openai>=1.3.0
 azure-ai-textanalytics
+pydantic
