@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-#from openai import AzureOpenAI
+from openai import AzureOpenAI
 import os
 import re
 from typing import Optional
@@ -28,16 +28,16 @@ AZURE_OPENAI_API_KEY = os.getenv("AZURE_OPENAI_API_KEY", "your-api-key-here")
 AZURE_OPENAI_DEPLOYMENT = os.getenv("AZURE_OPENAI_DEPLOYMENT", "gpt-4")
 AZURE_OPENAI_API_VERSION = os.getenv("AZURE_OPENAI_API_VERSION", "2024-02-15-preview")
 
-# Initialize Azure OpenAI client
-# try:
-#     client = AzureOpenAI(
-#         azure_endpoint=AZURE_OPENAI_ENDPOINT,
-#         api_key=AZURE_OPENAI_API_KEY,
-#         api_version=AZURE_OPENAI_API_VERSION
-#     )
-# except Exception as e:
-#     print(e)
-#     client = None
+ Initialize Azure OpenAI client
+ try:
+     client = AzureOpenAI(
+         azure_endpoint=AZURE_OPENAI_ENDPOINT,
+         api_key=AZURE_OPENAI_API_KEY,
+         api_version=AZURE_OPENAI_API_VERSION
+     )
+ except Exception as e:
+     print(e)
+     client = None
 
 
 
